@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 
 interface Props {
-    children: any;
+    children: never;
 }
 const Layout = ({ children }: Props) => {
   return (
