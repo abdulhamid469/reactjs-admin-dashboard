@@ -1,6 +1,10 @@
 import { useRef, useState } from "react";
 import { Calendar, ChatbubbleEllipses, Cog, Cube, DocumentText, FileTrayFull, Grid, Heart, Layers } from "react-ionicons";
 
+interface MenuItem {
+    title: string;
+}
+
 const Sidebar = () => {
     const [activePage, setActivePage] = useState("home");
     const indicatorDiv = useRef<HTMLDivElement>(null);
@@ -16,7 +20,7 @@ const Sidebar = () => {
         { title:"calender", icon: Calendar }
     ];
 
-    const handleItemClick = (item: any, e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const handleItemClick = (item: MenuItem, e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         setActivePage(item.title);
 
         const offsetTop = e.currentTarget.offsetTop;
