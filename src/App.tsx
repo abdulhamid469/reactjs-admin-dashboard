@@ -1,8 +1,11 @@
 import Layout from "./Layout";
+import StartCards from "./components/StartCards";
 
 const App = () => {
   return (
-    <Layout>test</Layout>
+    <Layout>
+      <StartCards />
+    </Layout>
   )
 }
 
